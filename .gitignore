@@ -1,3 +1,7 @@
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
+
 # Compiled Object files
 *.slo
 *.lo
@@ -11,35 +15,63 @@
 *.la
 *.a
 
-# git ignore file
-*.obj
-*.opensdf
-*.exe
-*.exp
-*.pdb
-*.dll
+#Visual Studio files
+*.[Oo]bj
 *.user
 *.aps
 *.pch
 *.vspscc
+*.vssscc
 *_i.c
 *_p.c
 *.ncb
 *.suo
 *.tlb
-*.sdf
 *.tlh
 *.bak
-*.cache
+*.[Cc]ache
 *.ilk
 *.log
-*.zip
-[Dd]ebug*/
 *.lib
 *.sbr
-Thumbs.db
-[Ll]ib/
+*.sdf
+*.opensdf
+*.unsuccessfulbuild
+ipch/
+obj/
+[Bb]in
+[Dd]ebug*/
 [Rr]elease*/
-[Tt]est[Rr]esults/
-_UpgradeReport_Files/
-_ReSharper.*/
+Ankh.NoLoad
+
+#MonoDevelop
+*.pidb
+*.userprefs
+
+#Tooling
+_ReSharper*/
+*.resharper
+[Tt]est[Rr]esult*
+*.sass-cache
+
+#Project files
+[Bb]uild/
+
+#Subversion files
+.svn
+
+# Office Temp Files
+~$*
+
+#NuGet
+packages/
+
+#ncrunch
+*ncrunch*
+*crunch*.local.xml
+
+# visual studio database projects
+*.dbmdl
+
+#Test files
+*.testsettings
