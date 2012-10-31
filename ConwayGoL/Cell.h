@@ -6,8 +6,9 @@
  *  Modified:	 31 October 2012 03:14
  */
 
-#ifndef Cell_H 
-#define Cell_H
+#ifndef CELL_H 
+#define CELL_H
+#include "Location.h"
 using namespace std;
 
 class Cell{
@@ -22,12 +23,16 @@ public:
 
 	// Updates cell status to one of the enumerated types that are pre-defined.
 	void UpdateCellStatus(enum Status);
-
+	
+	// Checks cell neighbor's statuses and returns the number of alive cells.
+	int CheckCellNeighbors();
 
 private:
-	// Initialized cell status to dead. Enumerated type is used for future potential expansion of status types.
-	enum Status stats;
-	Cell *neighbors[3][3];
+	enum Status stats;		// Enumerated type status keeps track of status of the cell. 
+	Cell *neighbors[3][3];	// Array of pointers to Cell objects that neighbor this cell.
+	int ID;					// Cell identification number.
+	Location loc;			// Cell location with reference to the map.
+
 }; 
 
-#endif //Cell_H
+#endif //CELL_H

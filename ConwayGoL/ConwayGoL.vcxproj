@@ -70,10 +70,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Cell.h" />
+    <ClInclude Include="GameMap.h" />
+    <ClInclude Include="Location.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cell.cpp" />
     <ClCompile Include="ConwayGoL.cpp" />
+    <ClCompile Include="GameMap.cpp" />
+    <ClCompile Include="Location.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

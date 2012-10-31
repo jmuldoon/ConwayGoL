@@ -22,3 +22,17 @@ Cell::~Cell(){};
 void Cell::UpdateCellStatus(enum Status s){
 	stats = s;
 }
+
+// Checks cell neighbor's statuses and returns the number of alive cells.
+int Cell::CheckCellNeighbors(){
+	int cnt = 0;
+	//for(int i=0,j=0; i<3; i++,j++){
+	//	if(neighbors[i][j].stats == ALIVE){
+	//		// Checks the neighbor cell with the current and makes sure they are not the same
+	//		if(&neighbors[1][1] != this){
+	//			cnt++;
+	//		}
+	//	}
+	//}
+	return cnt;
+}
