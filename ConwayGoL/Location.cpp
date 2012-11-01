@@ -1,6 +1,7 @@
 #include "Location.h"
 
 
-Location::Location(void)
-{
+Location::Location(int x, int y){
+	this->x = x;
+	this->y = y;
 }

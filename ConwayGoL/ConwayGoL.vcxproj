@@ -72,12 +72,14 @@
     <ClInclude Include="Cell.h" />
     <ClInclude Include="GameMap.h" />
     <ClInclude Include="Location.h" />
+    <ClInclude Include="Space.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cell.cpp" />
     <ClCompile Include="ConwayGoL.cpp" />
     <ClCompile Include="GameMap.cpp" />
     <ClCompile Include="Location.cpp" />
+    <ClCompile Include="Space.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -9,7 +9,9 @@ using namespace std;
 
 class Location{
 public:
-	Location(void);
+	Location(int,int);
+private:
+	int x, y;
 };
 
 #endif //LOCATION_H

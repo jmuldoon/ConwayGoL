@@ -15,12 +15,14 @@ Cell::Cell(void){
 }
 
 // Default deconstructor
-Cell::~Cell(){};
+Cell::~Cell(){
+	// Do something
+}
 
 // Updates cell status to one of the enumerated types that are pre-defined
 // Parameter s is the current status of the cell that should override the previous cell status
-void Cell::UpdateCellStatus(enum Status s){
-	stats = s;
+void Cell::UpdateCellStatus(enum Status status){
+	this->status = status;
 }
 
 // Checks cell neighbor's statuses and returns the number of alive cells.
@@ -35,4 +37,12 @@ int Cell::CheckCellNeighbors(){
 	//	}
 	//}
 	return cnt;
+}
+
+// Accessor methods for cell id.
+void Cell::SetCellID(int id){
+	cID = id;
+}
+int Cell::GetCellID(){
+	return cID;
 }

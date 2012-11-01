@@ -8,7 +8,6 @@
 
 #ifndef CELL_H 
 #define CELL_H
-#include "Location.h"
 using namespace std;
 
 class Cell{
@@ -27,12 +26,17 @@ public:
 	// Checks cell neighbor's statuses and returns the number of alive cells.
 	int CheckCellNeighbors();
 
-private:
-	enum Status stats;		// Enumerated type status keeps track of status of the cell. 
-	Cell *neighbors[3][3];	// Array of pointers to Cell objects that neighbor this cell.
-	int ID;					// Cell identification number.
-	Location loc;			// Cell location with reference to the map.
+	// Returns the cell ID
+	int GetCellID();
 
+private:
+	// Allows for the setting of Cell ID.
+	void SetCellID(int);
+
+	// Class attributes.
+	enum Status status;		// Enumerated type status keeps track of status of the cell. 
+	Cell *neighbors[3][3];	// Array of pointers to Cell objects that neighbor this cell.
+	int cID;				// Cell identification number.
 }; 
 
 #endif //CELL_H
