@@ -1,5 +1,5 @@
-/*  Description: Space class declaration is derived from GameMap. This class designates a location on the
- *				 GameMap that can have a cell object.
+/*  Description: Space class declaration. This class designates a location on the GameMap that can have a
+ *				 cell object.
  *  Author:		 James Muldoon
  *  Created:	 31 October 2012 18:26
  *  Modified:	 31 October 2012 18:26

@@ -1,3 +1,9 @@
+/*  Description: Space definition for the setting of the location with reference to the GameMap and the
+ *				 creation of a cell for each space within the constructor.
+ *  Author:		 James Muldoon
+ *  Created:	 31 October 2012 18:26
+ *  Modified:	 01 November 2012 03:36
+ */
 #include "Space.h"
 
 // Constructor for Space identification number is set by parameter i.
