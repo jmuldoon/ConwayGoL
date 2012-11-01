@@ -16,9 +16,19 @@ public:
 	GameMap(int);
 	~GameMap();
 
-	void UpdateSpaceLocation();
-
 private:
+	// Computes the row the space is currently located in with the use of the mSize for reference and the
+	// Space ID (sID).
+	int ComputeRow(int);
+	
+	// Computes the col the space is currently located in with the use of the mSize for reference and the
+	// Space ID (sID).
+	int ComputeCol(int);
+
+	// Updates the space's location(row,col) for the game map with regards to the map size (mSize). First
+	// parameter is the id of the space that is going to be updated for quick reference.
+	void UpdateSpaceLocation(int, int, int);
+
 	int mSize, nSpaces;
 	vector<Space*> mSpaces;
 };

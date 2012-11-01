@@ -19,10 +19,15 @@ public:
 
     // Destructor 
     ~Space(); 
+
+	// Needs an accessor for setting the space ID. Unfortunately this will be public until I can think of
+	// a better method for later on.
+	void SetSpaceLocation(int, int);
+
 private:
 	int sID;				// Space identification number.
 	Cell *sCell;			// Space cell.
 	Location *sLoc;			// Space location with reference to the map.
-}; 
+};
 
 #endif //SPACE_H

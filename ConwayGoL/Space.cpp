@@ -11,3 +11,7 @@ Space::~Space(){
 	// Do something
 }
 
+// Set Space location from the parameters row and column by creating a new location object.
+void Space::SetSpaceLocation(int row, int col){
+	this->sLoc = new Location(row,col);
+}
