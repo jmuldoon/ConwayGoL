@@ -3,7 +3,6 @@
  *				 the game map super class.
  *  Author:		 James Muldoon
  *  Created:	 31 October 2012 05:24
- *  Modified:	 31 October 2012 05:24
  */
 #ifndef GAMEMAP_H 
 #define GAMEMAP_H

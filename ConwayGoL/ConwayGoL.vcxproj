@@ -69,16 +69,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BinarySearchTree.h" />
     <ClInclude Include="Cell.h" />
     <ClInclude Include="GameMap.h" />
     <ClInclude Include="Location.h" />
+    <ClInclude Include="Neighbor.h" />
     <ClInclude Include="Space.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BinarySearchTree.cpp" />
     <ClCompile Include="Cell.cpp" />
     <ClCompile Include="ConwayGoL.cpp" />
     <ClCompile Include="GameMap.cpp" />
     <ClCompile Include="Location.cpp" />
+    <ClCompile Include="Neighbor.cpp" />
     <ClCompile Include="Space.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

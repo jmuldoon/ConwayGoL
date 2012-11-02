@@ -2,14 +2,18 @@
  *				 creation of a cell for each space within the constructor.
  *  Author:		 James Muldoon
  *  Created:	 31 October 2012 18:26
- *  Modified:	 01 November 2012 03:36
  */
 #include "Space.h"
 
-// Constructor for Space identification number is set by parameter i.
-Space::Space(int i){
-	sID = i;
-	sCell = new Cell();
+// Constructor for Space identification number is set by parameter i. 3rd and 4th parameter are the row and
+// column for the location of the space with reference tot he Game Map.
+Space::Space(int id, int size, int x, int y){
+	sID = id;
+	mSize = size;
+	SetSpaceLocation(x,y);
+	sNeighbor = new Neighbor(id, *sLoc);
+	sNeighbor->UpdateCenterNeighbors(size);
+	sCell = new Cell(*sNeighbor);
 }
 
 // Deconstructor

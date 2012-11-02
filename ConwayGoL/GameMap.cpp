@@ -1,7 +1,6 @@
 /*  Description: GameMap class declaration. Stores location, and map instantiation capability.
  *  Author:		 James Muldoon
  *  Created:	 31 October 2012 05:24
- *  Modified:	 31 October 2012 05:24
  */
 #include "GameMap.h"
 
@@ -11,8 +10,7 @@ GameMap::GameMap(int size){
 	nSpaces = (size*size);	// Number of map spaces
 
 	for(int i=0; i<nSpaces; i++){
-		mSpaces.push_back(new Space(i));		
-		UpdateSpaceLocation(i, ComputeRow(i),ComputeCol(i));
+		mSpaces.push_back(new Space(i, mSize, ComputeRow(i), ComputeCol(i)));		
 	}
 }
 
@@ -41,9 +39,3 @@ int GameMap::ComputeCol(int id){
 	else
 		return id;
 }
-
-// Updates the location in the space object stored in the vector.
-void GameMap::UpdateSpaceLocation(int id, int row, int col){
-	mSpaces[id]->SetSpaceLocation(row,col);
-}
-

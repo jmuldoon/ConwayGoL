@@ -3,11 +3,11 @@
  *				 cells.
  *  Author:		 James Muldoon
  *  Created:	 31 October 2012 03:14
- *  Modified:	 01 November 2012 03:36
  */
 
 #ifndef CELL_H 
 #define CELL_H
+#include "Neighbor.h"
 using namespace std;
 
 class Cell{
@@ -15,7 +15,7 @@ typedef enum STATUS {DEAD=0, ALIVE};
 
 public: 
 	// Default constructor.
-    Cell();
+    Cell(Neighbor &);
 
     // Destructor 
     ~Cell(); 
@@ -28,7 +28,7 @@ public:
 	int CheckCellStatus();
 	
 	// Checks cell neighbor's statuses and returns the number of alive cells.
-//	int CheckCellNeighbors();
+	void CheckCellNeighbors();
 
 	// Returns the cell ID
 	int GetCellID();
@@ -37,8 +37,9 @@ private:
 	// Allows for the setting of Cell ID.
 	void SetCellID(int);
 
-	STATUS status;		// Enumerated type status keeps track of status of the cell. 
-//	Cell *neighbors[3][3];	// Array of pointers to Cell objects that neighbor this cell.
+	int livingCellCount;	// The number of ALIVE cells that neighbor this cell.
+	Neighbor *csNeighbor;	// the space neighbor object that stores the cell's space neighbors.
+	STATUS status;			// Enumerated type status keeps track of status of the cell. 
 	int cID;				// Cell identification number.
 }; 
 
