@@ -77,7 +77,6 @@
     <ClInclude Include="Space.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BinarySearchTree.cpp" />
     <ClCompile Include="Cell.cpp" />
     <ClCompile Include="ConwayGoL.cpp" />
     <ClCompile Include="GameMap.cpp" />
