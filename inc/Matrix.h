@@ -14,8 +14,8 @@
 class Matrix{
 public:
     Matrix(size_t rows, size_t cols);
-//    double& operator()(size_t i, size_t j);
-//    double operator()(size_t i, size_t j) const;
+    void AddMatrixData(const double);
+    void PrintMatrix();
 
 private:
     size_t mRows;
