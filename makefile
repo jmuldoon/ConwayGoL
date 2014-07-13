@@ -23,7 +23,7 @@ OBJS = $(addprefix $(ODIR)/, $(notdir $(SOURCES:.cpp=.o)))
 
 # Compiler flags:
 #	-g 		adds debugging information to the executable file
-#	-Wall		turns on most, but not all, compiler warnings
+#	-Wall		turns on most  but not all  compiler warnings
 #	-I.		gcc will look in the current directory (.) for the include file(s)
 #	-pthread	allows system threads to be used.
 CXXFLAGS = -Wall -std=c++0x -g $(INCLUDES)
@@ -43,6 +43,6 @@ $(ODIR)/$(TARGET): $(OBJS)
 # Ensures that the rule below is followed and not another clean is executed
 .PHONY: clean
 
-# Removes the object file, backup files, core dumps, and the executable by "make clean"
+# Removes the object file  backup files  core dumps  and the executable by "make clean"
 clean:
 	$(RM) $(ODIR)/*.o *~ core $(ODIR)/$(TARGET) $(ODIR)/$(TARGET).exe $(INCDIR)/*~

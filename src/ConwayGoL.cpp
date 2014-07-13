@@ -2,9 +2,10 @@
 // Modified by: James Muldoon
 
 #include "Shape.h"
-#include <iostream>
+#include "ReadInputFile.h"
 #define HEIGHT 20
 #define WIDTH 20
+#define INPUT_DATA_FILE "res/input.csv"
 
 class GameOfLife {
 public:
@@ -126,25 +127,26 @@ void GameOfLife::iterate( unsigned int iterations ) {
 }
 
 int main() {
+	ReadInputFile *inFile = new ReadInputFile(INPUT_DATA_FILE);
 
-	// Basic Test Cases
-	GameOfLife *gols[] = {
-		// Spaceships
-		new GameOfLife(Glider(0,0))
-		, new GameOfLife(LightWSS(15,0))
-		// Oscillators
-		, new GameOfLife(Blinker(1,1))
-		, new GameOfLife(Toad(1,1))
-		, new GameOfLife(Beacon(1,1))
-	    , new GameOfLife(Pulsar(1,1))
-		// Still Lifes
-		, new GameOfLife(Block(1,1))
-		, new GameOfLife(Beehive(1,1))
-		, new GameOfLife(Loaf(1,1))
-		, new GameOfLife(Boat(1,1))
-	};
-	// Run Basic Test Cases
-	for(int i = 0; i < (sizeof(gols)/sizeof(gols[0])); i++){
-		gols[i]->iterate(5);
-	}
+//	// Basic Test Cases
+//	GameOfLife *gols[] = {
+//	  // Spaceships
+//	  new GameOfLife(Glider(0, 0)),
+//	  new GameOfLife(LightWSS(15, 0)),
+//	  // Oscillators
+//	  new GameOfLife(Blinker(1, 1)),
+//	  new GameOfLife(Toad(1, 1)),
+//	  new GameOfLife(Beacon(1, 1)),
+//	  new GameOfLife(Pulsar(1, 1)),
+//	  // Still Lifes
+//	  new GameOfLife(Block(1, 1)),
+//	  new GameOfLife(Beehive(1, 1)),
+//	  new GameOfLife(Loaf(1, 1)),
+//	  new GameOfLife(Boat(1, 1)),
+//	};
+//	// Run Basic Test Cases
+//	for(int i = 0; i < (sizeof(gols)/sizeof(gols[0])); i++){
+//		gols[i]->iterate(5);
+//	}
 }

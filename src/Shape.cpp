@@ -1,13 +1,13 @@
 /*
  * Shape.cpp
  *
- *  Created on: Jul 12, 2014
+ *  Created on: Jul 12  2014
  *      Author: james
  */
 
 #include "Shape.h"
 
-Glider::Glider( char x , char y ) {
+Glider::Glider( char x, char y ) {
     xCoord = x;
     yCoord = y;
     height = GLIDER_SIZE;
@@ -67,7 +67,7 @@ LightWSS::~LightWSS() {
     delete[] figure;
 }
 
-Blinker::Blinker( char x , char y ) {
+Blinker::Blinker( char x, char y ) {
     xCoord = x;
     yCoord = y;
     height = BLINKER_HEIGHT;
@@ -90,7 +90,7 @@ Blinker::~Blinker() {
     delete[] figure;
 }
 
-Toad::Toad( char x , char y ) {
+Toad::Toad( char x, char y ) {
     xCoord = x;
     yCoord = y;
     height = TOAD_HEIGHT;
@@ -120,7 +120,7 @@ Toad::~Toad() {
     delete[] figure;
 }
 
-Beacon::Beacon( char x , char y ) {
+Beacon::Beacon( char x, char y ) {
     xCoord = x;
     yCoord = y;
     height = BEACON_SIZE;
@@ -153,7 +153,7 @@ Beacon::~Beacon() {
     delete[] figure;
 }
 
-Pulsar::Pulsar( char x , char y ) {
+Pulsar::Pulsar( char x, char y ) {
     xCoord = x;
     yCoord = y;
     height = PULSAR_SIZE;
@@ -230,8 +230,8 @@ Pulsar::~Pulsar() {
 }
 
 
-// Still Life Shapoes
-Block::Block( char x , char y ) {
+// Still Life Shapes
+Block::Block( char x, char y ) {
     xCoord = x;
     yCoord = y;
     height = BLOCK_SIZE;
@@ -258,7 +258,7 @@ Block::~Block() {
     delete[] figure;
 }
 
-Beehive::Beehive( char x , char y ) {
+Beehive::Beehive( char x, char y ) {
     xCoord = x;
     yCoord = y;
     height = BEEHIVE_HEIGHT;
@@ -287,7 +287,7 @@ Beehive::~Beehive() {
     delete[] figure;
 }
 
-Loaf::Loaf( char x , char y ) {
+Loaf::Loaf( char x, char y ) {
     xCoord = x;
     yCoord = y;
     height = LOAF_SIZE;
@@ -317,7 +317,7 @@ Loaf::~Loaf() {
     delete[] figure;
 }
 
-Boat::Boat( char x , char y ) {
+Boat::Boat( char x, char y ) {
     xCoord = x;
     yCoord = y;
     height = BOAT_SIZE;
