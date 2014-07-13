@@ -8,6 +8,9 @@
 #ifndef SHAPE_H_
 #define SHAPE_H_
 
+#include "Matrix.h"
+
+
 struct Shape {
 public:
     char xCoord;
@@ -15,6 +18,14 @@ public:
     char height;
     char width;
     char **figure;
+};
+
+// Dynamic Base Configuration
+struct Dynamic : public Shape {
+//	static const char DYNAMIC_HEIGHT = 0;
+//	static const char DYNAMIC_WIDTH = 0;
+	Dynamic( char x, char y , Matrix *m );
+	~Dynamic();
 };
 
 // Spaceships Shapes

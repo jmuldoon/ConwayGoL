@@ -16,6 +16,7 @@ class ReadInputFile {
 public:
 	ReadInputFile(const char *idf);
 	~ReadInputFile();
+	Matrix* GetMatrix();
 
 private:
     const char *input_data_file;

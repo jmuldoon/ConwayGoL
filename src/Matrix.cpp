@@ -13,6 +13,17 @@ void Matrix::AddMatrixData(const double data){
 	mData.push_back(data);
 }
 
+const std::vector<double> Matrix::ReadMatrixData(){
+	return mData;
+}
+
+const size_t Matrix::ReadRow(){
+	return mRows;
+}
+const size_t Matrix::ReadCol(){
+	return mCols;
+}
+
 void Matrix::PrintMatrix(){
 	for (auto i = mData.begin(); i != mData.end(); ++i) {
 		std::cout << *i;

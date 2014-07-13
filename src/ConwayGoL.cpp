@@ -3,6 +3,7 @@
 
 #include "Shape.h"
 #include "ReadInputFile.h"
+#include "Matrix.h"
 #define HEIGHT 20
 #define WIDTH 20
 #define INPUT_DATA_FILE "res/input.csv"
@@ -128,6 +129,9 @@ void GameOfLife::iterate( unsigned int iterations ) {
 
 int main() {
 	ReadInputFile *inFile = new ReadInputFile(INPUT_DATA_FILE);
+	Matrix *m = inFile->GetMatrix();
+	GameOfLife *gol = new GameOfLife(Dynamic(0,0,m));
+	gol->iterate(48);
 
 //	// Basic Test Cases
 //	GameOfLife *gols[] = {

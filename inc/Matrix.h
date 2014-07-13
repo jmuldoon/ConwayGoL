@@ -15,6 +15,10 @@ class Matrix{
 public:
     Matrix(size_t rows, size_t cols);
     void AddMatrixData(const double);
+    const std::vector<double> ReadMatrixData();
+    const size_t ReadRow();
+    const size_t ReadCol();
+
     void PrintMatrix();
 
 private:

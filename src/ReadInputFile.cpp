@@ -44,3 +44,7 @@ ReadInputFile::~ReadInputFile(){
 	delete[] fMatrix;
 }
 
+Matrix* ReadInputFile::GetMatrix(){
+	return fMatrix;
+}
+

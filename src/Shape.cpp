@@ -6,6 +6,38 @@
  */
 
 #include "Shape.h"
+#include <iostream>
+
+Dynamic::Dynamic( char x, char y, Matrix *m ) {
+	Matrix *tmp = m;
+	char DYNAMIC_HEIGHT = tmp->ReadRow();
+	char DYNAMIC_WIDTH = tmp->ReadCol();
+	xCoord = x;
+    yCoord = y;
+    height = DYNAMIC_HEIGHT;
+    width = DYNAMIC_WIDTH;
+    figure = new char*[DYNAMIC_HEIGHT];
+    for ( char i = 0; i < DYNAMIC_HEIGHT; i++ ) {
+        figure[i] = new char[DYNAMIC_WIDTH];
+    }
+    int index=0;
+    for ( char i = 0; i < DYNAMIC_HEIGHT; i++ ) {
+        for ( char j = 0; j < DYNAMIC_WIDTH; j++, index++ ) {
+        	if((tmp->ReadMatrixData())[index]==1)
+        		figure[i][j] = 'X';
+        	else
+        		figure[i][j] = '.';
+        }
+    }
+}
+
+Dynamic::~Dynamic() {
+    for ( char i = 0; i < height; i++ ) {
+        delete[] figure[i];
+    }
+    delete[] figure;
+}
+
 
 Glider::Glider( char x, char y ) {
     xCoord = x;
