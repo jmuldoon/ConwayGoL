@@ -7,6 +7,9 @@
 #define HEIGHT 20
 #define WIDTH 20
 #define INPUT_DATA_FILE "res/input.csv"
+#define GENERATION_COUNT 48
+#define X_LOC 0
+#define Y_LOC 0
 
 class GameOfLife {
 public:
@@ -130,8 +133,8 @@ void GameOfLife::iterate( unsigned int iterations ) {
 int main() {
 	ReadInputFile *inFile = new ReadInputFile(INPUT_DATA_FILE);
 	Matrix *m = inFile->GetMatrix();
-	GameOfLife *gol = new GameOfLife(Dynamic(0,0,m));
-	gol->iterate(48);
+	GameOfLife *gol = new GameOfLife(Dynamic(X_LOC,Y_LOC,m));
+	gol->iterate(GENERATION_COUNT);
 
 //	// Basic Test Cases
 //	GameOfLife *gols[] = {
