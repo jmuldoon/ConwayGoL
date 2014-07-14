@@ -9,7 +9,7 @@ following configuration files input.csv can be used for dynamic seeding.
 An example and detailed explanation is best done through Figure 1:
 
 // Default Matrix Seed
-'''
+```
 6 6
 1 0 1 0 1 1
 0 1 1 0 0 1
@@ -17,7 +17,7 @@ An example and detailed explanation is best done through Figure 1:
 1 0 1 0 1 1
 1 1 1 1 0 0
 0 1 1 1 0 1
-'''
+```
 -Figure 1
 
 The first line of the file should be row column, and must be separated by
@@ -29,12 +29,12 @@ The following definitions found in ConwayGoL.cpp can be adjusted if needed for
 larger mapping/start locations of the initial cells as seen in Figure 2.
 
 // Default Values
-'''c++
+```c++
 #define HEIGHT 20
 #define WIDTH 20
 #define INPUT_DATA_FILE "res/input.csv"
 #define GENERATION_COUNT 48
 #define X_LOC 0
 #define Y_LOC 0
-'''
+```
 -Figure 2
